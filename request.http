@@ -1,0 +1,49 @@
+###
+
+POST http://localhost:5000/api/v1/personas/persona HTTP/1.1
+Content-Type: application/json
+
+{
+  "client_name": "Yaneth",
+  "address":[{
+    "city": "Manizales",
+    "code_zip":"170002",
+    "geo":[{
+      "lat": -4.5985,
+      "long": 0.2733
+    }]
+  }],
+  "contact":{
+    "email":"ymejia@umanizales.edu.co",
+    "cellphone": "30454558**"
+  }
+}
+
+###
+GET http://localhost:5000/api/v1/personas/ HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/personas/623ba9c67087b4fa44909cc3 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/v1/personas/623ba9c67087b4fa44909cc3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "client_name": "Santiago Cardenas",
+  "address":[{
+    "city": "Manizales",
+    "code_zip":"19872",
+    "geo":[{
+      "lat": -4.4563,
+      "long": 2.4567
+    }]
+  }],
+  "contact":{
+    "email":"scardenas79417@umanizales.edu.co",
+    "cellphone": "3175963347"
+  }
+}
+
+###
+DELETE http://localhost:5000/api/v1/personas/623ba9c67087b4fa44909cc3 HTTP/1.1
